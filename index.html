@@ -476,7 +476,9 @@ body::after {
 .cal-main-btn:active { opacity: 0.8; }
 
 .cal-icon {
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
 }
 
@@ -654,7 +656,14 @@ body::after {
           <!-- ADD TO CALENDAR -->
           <div class="calendar-wrap">
             <button class="cal-main-btn" onclick="toggleCalendar()">
-              <span class="cal-icon">📅</span>
+              <span class="cal-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="5" width="18" height="16" rx="2" stroke="#3d2c12" stroke-width="2"/>
+                  <path d="M3 9H21" stroke="#3d2c12" stroke-width="2"/>
+                  <path d="M8 3V7" stroke="#3d2c12" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M16 3V7" stroke="#3d2c12" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
               ADD TO CALENDAR
             </button>
 
@@ -689,7 +698,7 @@ body::after {
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="white">
                     <path d="M7 12a5 5 0 1 1 10 0A5 5 0 0 1 7 12zm5-3a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
                     <path d="M2 6.5A1.5 1.5 0 0 1 3.5 5H10v2H4v10h16V7h-6V5h6.5A1.5 1.5 0 0 1 22 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17.5v-11z"/>
-                  </svg>
+                </svg>
                 </span>
                 Outlook Calendar
               </a>
